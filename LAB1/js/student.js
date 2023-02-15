@@ -28,3 +28,17 @@ function outputResult(evt) {
 	result1.textContent = a + b;
 	result2.textContent = a * b;
 }
+
+function outputResultWithErrorCheck(evt) {
+	const a = parseInt(form.a.value);
+	const b = parseInt(form.b.value, 10);
+
+	if(isNaN(a) || isNaN(b)){
+		result1.textContent = "Please enter a number";
+		result2.textContent = "Please enter a number";
+	} else {
+		result1.textContent = a + b;
+		result2.textContent = a * b;
+	}
+}
+
